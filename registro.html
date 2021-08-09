@@ -1,0 +1,78 @@
+<!-- We don't need a full layout in this file because this page will be parsed with Ajax.  -->
+<div class="page no-toolbar" data-name="register">
+    <div class="page-content">
+        <div class="block-title">
+          <h1 class="text-align-center">Registro</h1>
+        </div>
+      
+        <div class="block">
+        <div class="list no-hairlines-md">
+        <form class="list" id="my-form">
+          <h3 class="text-align-center">Elegí tu avatar</h3>
+          <div class="row avatares">
+            <div class="col-100">
+              <img src="img/iconos/estrella.png" alt="" class="fotoPerfil" id="estrella">
+              <img src="img/iconos/guitarra.png" alt="" class="fotoPerfil" id="guitarra">
+              <img src="img/iconos/lapices.png" alt="" class="fotoPerfil" id="lapices">
+              <img src="img/iconos/manzana.png" alt="" class="fotoPerfil" id="manzana">
+              <img src="img/iconos/piano.png" alt="" class="fotoPerfil" id="piano">
+              <img src="img/iconos/pintar.png" alt="" class="fotoPerfil" id="pintar">
+            </div>
+          </div>
+      <div>
+       <ul class="cont-form">
+         <li class="item-content item-input">
+           <div class="item-inner">
+             <div class="item-title item-label">Nombre</div>
+             <div class="item-input-wrap">
+               <input type="text" value="" placeholder="Ingresá tu nombre" id="nombreRegistro" required validate/>
+               <span class="input-clear-button"></span>
+             </div>
+           </div>
+         </li>
+
+         <li class="item-content item-input">
+           <div class="item-inner">
+             <div class="item-title item-label">Email</div>
+             <div class="item-input-wrap">
+               <input type="email" value="" placeholder="Ingresá tu email" id="emailRegistro" required validate/>
+               <span class="input-clear-button"></span>
+             </div>
+           </div>
+           </li>
+  
+            <li class="item-content item-input">
+                    <div class="item-inner">
+                      <div class="item-title item-label">Fecha de nacimiento</div>
+                      <div class="item-input-wrap">
+                        <input type="date" value="" placeholder="Fecha de nacimiento" id="fechaNacReg" required validate/>
+                      </div>
+                    </div>
+                  </li>
+
+
+         <li class="item-content item-input">
+           <div class="item-inner">
+             <div class="item-title item-label">Contraseña</div>
+             <div class="item-input-wrap">
+               <input type="password" value="" placeholder="Ingresá tu contraseña" id="passRegistro" required validate/>
+               <span class="input-clear-button"></span>
+             </div>
+           </div>
+         </li>
+        </ul>
+      </div>
+           <div class="row">
+            <a href="/login/" class="link-login">¿Ya tenés una cuenta?</a>
+                                                     <!-- CLASE QUE LLAMA AL POPOVER-->
+            <a href="" class="col-50 button button-large button-raised button-fill link margin-top" id="btnRegistro">Registrarme</a>
+          </div>
+           </form>
+           </div>
+
+    </div>
+
+        
+
+</div>
+</div>
