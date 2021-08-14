@@ -120,3 +120,9 @@ div[data-name="index"].page-content {
 .fondo {
   width: 100%;
 }
+
+/* Estilo para el avatar elegido */
+
+.avatarElegido {
+  border:1px solid rgb(190, 245, 108);
+}

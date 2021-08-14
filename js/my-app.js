@@ -17,7 +17,6 @@ var app = new Framework7({
         // RUTAS GENERALES
       { path: '/', url: 'index.html', },
       { path: '/registro/', url: 'registro.html' },
-      { path: '/login/', url: 'login.html' },
 
 ]
  // ... other parameters
@@ -33,11 +32,10 @@ $$(document).on('deviceready', function() {
 // Option 1. Using one 'page:init' handler for all pages
 $$(document).on('page:init', function (e) {
     // Do something here when page loaded and initialize
-    console.log(e);
+  // console.log(e);
 
       
 })
-
 
 // Option 2. Using live 'page:init' event handlers for each page
 
@@ -52,6 +50,7 @@ $$(document).on('page:init', '.page[data-name="index"]', function (e) {
 
         $$('#registro').on('click', function(){
           mainView.router.navigate('/registro/');
+          console.log("carga registro");
         })
 
         $$('#login').on('click', function(){
@@ -59,5 +58,54 @@ $$(document).on('page:init', '.page[data-name="index"]', function (e) {
         })
 })
 
+// 10/8/2021
+// QUÉ HICE: REGISTRO DE USUARIO
+// DE 14 a 16:23hs
+// Gracias al Señor puedo registrar un usuario --> 16:23hs
 
 // REGISTRO
+
+
+$$(document).on('page:init', '.page[data-name="registro"]', function (e) {
+  $$('#btnRegistro').on('click', registro);
+  $$('img').on('click', function() { avatarUsuario(this.id) });
+});
+
+function registro() {
+  nombre = $$('#nombre').val();
+  email = $$('#emailRegistro').val();
+  passReg = $$('#passRegistro').val();
+
+  firebase.auth().createUserWithEmailAndPassword(email, passReg)
+  .then((userCredential) => {
+    // Registrado
+    var user = userCredential.user;
+    // Avatar
+    
+    // nombre
+      console.info('Nombre: ' + nombre);
+      //email
+      console.info('Email:' + user.email);
+
+      // pass
+      console.info('Pass: ' + passReg);
+      
+  })
+  .catch((error) => {
+    // var errorCode = error.code;
+    // var errorMessage = error.message;
+
+    // Valido si el nombre que el usuario ingresa, es válido
+    if(!(/^[A-Za-zÑñÁáÉéÍíÓóÚú\s]+$/g.test(nombre))) return console.error(`${nombre} no es un nombre válido`);
+
+    // Valido si la contraseña que el usuario ingresa, no exceda los 6 caracteres
+    if(passReg > 6) return console.error("La contraseña no puede exceder los 6 caracteres");
+
+  });
+}
+
+function avatarUsuario(id) {
+  avatar = id;
+  $$('.fotoPerfil').addClass("avatarElegido");
+  console.info("Avatar elegido: ", avatar);
+}
