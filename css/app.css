@@ -124,5 +124,6 @@ div[data-name="index"].page-content {
 /* Estilo para el avatar elegido */
 
 .avatarElegido {
-  border:1px solid rgb(190, 245, 108);
+  border: 2px solid rgb(173, 248, 59);
+  border-radius: 5em;
 }
