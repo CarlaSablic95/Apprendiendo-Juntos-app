@@ -1,0 +1,31 @@
+// MARTES 10/8/2021
+// QUÉ HICE: REGISTRO DE USUARIO
+// DE 14 a 16:23hs
+- Gracias al Señor puedo registrar un usuario --> 16:23hs
+
+// MARTES 17/8/2021
+// De 11:28hs a 15:44hs
+/* QUÉ HICE: 
+- Registrar y loguear al usuario
+- Crear una colección de usuarios para la BD y agregarle datos con código, y no manualmente
+- GRACIAS AL SEÑOR, RECIÉN 13:08HS PUDE MOSTRAR EN LOGIN, LA FOTO QUE EL USUARIO ELIJE
+- GRACIAS AL SEÑOR 15:16HS, AGREGUÉ A LA BD LA COLECCIÓN DE USUARIOS Y SUS DATOS
+*/
+
+// MIÉRCOLES 18/8/2021
+/* De 15:21hs */
+/* QUÉ HICE:
+
+- Gracias al Señor 15:51hs, quité al login el toolbar, me dí cuenta que en el div que contiene el atributo data-name (nombre de la página), ahí es donde van las clases no-navbar no-toolbar. Pero si lo que querés es que se muestren el navbar y el toolbar, no le pongas ninguna clase, porque ya lo hereda del template principa, del index. 
+
+- 19:27hs gracias Al Señor creé la columna materia con su nombre
+
+Me tira este error cuando intento subir junto al nombre de la materia, el ícono:
+FirebaseError no detectado: función DocumentReference.set () llamada con datos no válidos. Valor de campo no admitido: indefinido (se encuentra en el icono de campo en el documento materias / id-materia)
+
+ERRORES:
+- Cada vez que registro a un alumno, me pisa el alumno anterior que registré
+- Cuando me registro, no me imprime por consola, el avatar que el usuario eligió
+- No me toma la foto de perfil en el toolbar
+
+*/

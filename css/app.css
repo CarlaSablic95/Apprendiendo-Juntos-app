@@ -87,7 +87,9 @@
 body {
   color: rgb(51, 50, 50);
 }
-h2 {
+
+/* Títulos */ 
+h1, h2, h3, h4 {
   text-align: center;
 }
 
@@ -126,4 +128,15 @@ div[data-name="index"].page-content {
 .avatarElegido {
   border: 2px solid rgb(173, 248, 59);
   border-radius: 5em;
+}
+
+
+/* iCONO BACK */
+i {
+  color: #ffff;
+}
+
+/* MATERIAS */
+.card-materia {
+  background: #a7edd5;
 }
